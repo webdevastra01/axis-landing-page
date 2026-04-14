@@ -1,6 +1,7 @@
 import HeroSection from "./components/HeroSection";
 import NavigationBar from "./components/NavigationBar";
 import ProblemSection from "./components/ProblemSection";
+import SolutionSection from "./components/SolutionSection";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       {/* Spacer to prevent content from being hidden behind navbar */}
       <HeroSection />
       <ProblemSection />
+      <SolutionSection/>
     </>
   );
 }

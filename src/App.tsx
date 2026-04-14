@@ -1,4 +1,5 @@
 import AboutSection from "./components/AboutSection";
+import DifferentiationSection from "./components/DifferentiationSection";
 import HeroSection from "./components/HeroSection";
 import NavigationBar from "./components/NavigationBar";
 import ProblemSection from "./components/ProblemSection";
@@ -18,6 +19,7 @@ function App() {
       <ServicesSection />
       <ProcessSection />
       <AboutSection />
+      <DifferentiationSection/>
     </>
   );
 }

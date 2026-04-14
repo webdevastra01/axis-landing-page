@@ -1,3 +1,4 @@
+import AboutSection from "./components/AboutSection";
 import HeroSection from "./components/HeroSection";
 import NavigationBar from "./components/NavigationBar";
 import ProblemSection from "./components/ProblemSection";
@@ -15,7 +16,8 @@ function App() {
       <ProblemSection />
       <SolutionSection />
       <ServicesSection />
-      <ProcessSection/>
+      <ProcessSection />
+      <AboutSection />
     </>
   );
 }

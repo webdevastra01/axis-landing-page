@@ -62,11 +62,10 @@
   color: var(--axis-primary);
 }
 
-/* Services Grid - 2x3 layout */
+/* Services Grid - 3 columns */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
   gap: var(--space-xl);
 }
 
@@ -75,11 +74,12 @@
   background: var(--color-surface);
   border: 1px solid var(--axis-gray-100);
   border-radius: var(--radius-lg);
-  padding: var(--space-xl);
   position: relative;
   transition: all var(--transition-base);
   cursor: pointer;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .service-card::before {
@@ -100,8 +100,8 @@
 }
 
 .service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-card);
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
   border-color: var(--axis-gray-300);
 }
 
@@ -109,11 +109,62 @@
   transform: scaleX(1);
 }
 
-.service-number {
-  font-size: 2rem;
-  margin-bottom: var(--space-md);
-  display: block;
-  line-height: 1;
+/* Image Wrapper */
+.service-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-lg);
+}
+
+.service-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-base);
+}
+
+.service-card:hover .service-image {
+  transform: scale(1.05);
+}
+
+/* Image Overlay with Read More */
+.service-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(75, 0, 110, 0.85) 0%,
+    rgba(75, 0, 110, 0.4) 50%,
+    transparent 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: var(--space-lg);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.service-card:hover .service-image-overlay {
+  opacity: 1;
+}
+
+.service-read-more {
+  color: var(--axis-white);
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: var(--space-sm) var(--space-lg);
+  transform: translateY(20px);
+  transition: all var(--transition-base);
+}
+
+.service-card:hover .service-read-more {
+  transform: translateY(0);
 }
 
 .service-title {
@@ -122,46 +173,21 @@
   color: var(--axis-black);
   margin-bottom: var(--space-sm);
   letter-spacing: -0.01em;
+  margin-left: var(--space-sm);
 }
 
 .service-description {
   font-size: 0.9375rem;
   color: var(--axis-gray-500);
   line-height: 1.6;
-  margin: 0 0 var(--space-md) 0;
-}
-
-.service-arrow {
-  position: absolute;
-  bottom: var(--space-lg);
-  right: var(--space-lg);
-  width: 32px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--axis-gray-100);
-  color: var(--axis-primary);
-  border-radius: var(--radius-full);
-  font-size: 1rem;
-  font-weight: var(--font-weight-bold);
-  transition: all var(--transition-base);
-  opacity: 0;
-  transform: translateX(-10px);
-}
-
-.service-card:hover .service-arrow {
-  opacity: 1;
-  transform: translateX(0);
-  background: var(--axis-primary);
-  color: var(--axis-white);
+  margin: 0 0 var(--space-md) var(--space-sm);
+  flex: 1;
 }
 
 /* Responsive */
 @media (max-width: 968px) {
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
   }
 }
 
@@ -177,14 +203,25 @@
 
   .service-card {
     padding: var(--space-lg);
+    border-radius: var(--radius-md);
   }
 
-  .service-arrow {
+  .service-image-wrapper {
+    aspect-ratio: 4 / 3;
+  }
+
+  .service-image-overlay {
     opacity: 1;
-    transform: translateX(0);
-    position: static;
-    margin-top: var(--space-md);
-    width: fit-content;
+    background: linear-gradient(
+      to top,
+      rgba(75, 0, 110, 0.7) 0%,
+      transparent 100%
+    );
+  }
+
+  .service-read-more {
+    transform: translateY(0);
+    font-size: 0.75rem;
     padding: var(--space-sm) var(--space-md);
   }
 
@@ -198,11 +235,20 @@
 }
 
 @media (max-width: 480px) {
-  .service-number {
-    font-size: 1.75rem;
-  }
-
   .service-title {
     font-size: 1.125rem;
+  }
+
+  .service-description {
+    font-size: 0.875rem;
+  }
+
+  .service-image-wrapper {
+    aspect-ratio: 1 / 1;
+  }
+
+  .service-read-more {
+    font-size: 0.75rem;
+    padding: var(--space-xs) var(--space-sm);
   }
 }

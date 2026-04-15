@@ -1,36 +1,44 @@
 import React from "react";
 import "../styles/ServicesSection.css";
+// Import your service images
+import socialMediaImg from "../assets/social-media-management.jpg";
+import brandingImg from "../assets/branding.png";
+import advertisingImg from "../assets/paid-advertising.jpg";
+import productionImg from "../assets/photo-video-production.jpg";
+import strategyImg from "../assets/marketing-strategy.jpg";
+import consultingImg from "../assets/marketing-consultation.jpg";
 
 const services = [
   {
-    number: "1️⃣",
+    image: socialMediaImg,
     title: "Social Media Management",
-    description: "Strategic content planning and engagement.",
+    description:
+      "Strategic content planning and engagement across all platforms.",
   },
   {
-    number: "2️⃣",
+    image: brandingImg,
     title: "Branding & Design",
-    description: "Logos, visuals, and brand identity systems.",
+    description: "Logos, visuals, and comprehensive brand identity systems.",
   },
   {
-    number: "3️⃣",
+    image: advertisingImg,
     title: "Paid Advertising",
-    description: "Conversion-driven ad campaigns.",
+    description: "Conversion-driven ad campaigns that maximize ROI.",
   },
   {
-    number: "4️⃣",
+    image: productionImg,
     title: "Photo & Video Production",
-    description: "Scroll-stopping visuals.",
+    description: "Scroll-stopping visuals that capture attention.",
   },
   {
-    number: "5️⃣",
+    image: strategyImg,
     title: "Marketing Strategy",
-    description: "Data-driven growth direction.",
+    description: "Data-driven growth direction and market analysis.",
   },
   {
-    number: "6️⃣",
+    image: consultingImg,
     title: "Marketing Consulting",
-    description: "Expert guidance and campaign planning.",
+    description: "Expert guidance and strategic campaign planning.",
   },
 ];
 
@@ -50,10 +58,18 @@ const ServicesSection: React.FC = () => {
         <div className="services-grid">
           {services.map((service, index) => (
             <div key={index} className="service-card">
-              <div className="service-number">{service.number}</div>
+              <div className="service-image-wrapper">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="service-image"
+                />
+                <div className="service-image-overlay">
+                  <span className="service-read-more">Read Description</span>
+                </div>
+              </div>
               <h3 className="service-title">{service.title}</h3>
               <p className="service-description">{service.description}</p>
-              <div className="service-arrow">→</div>
             </div>
           ))}
         </div>

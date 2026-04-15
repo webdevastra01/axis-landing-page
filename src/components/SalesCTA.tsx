@@ -16,6 +16,8 @@ const SalesCTA: React.FC = () => {
           <a
             href="https://avarissalessolutions.vercel.app/"
             className="sales-cta-button"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <span>Check out Avaris Sales Solutions</span>
             <span className="sales-cta-arrow">👉</span>

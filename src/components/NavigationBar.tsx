@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import logo from "../assets/navbar_logo.png";
 import "../styles/NavigationBar.css";
+import ContactModal from "./ContactModal";
 
 const NavigationBar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,6 +28,11 @@ const NavigationBar: React.FC = () => {
         behavior: "smooth",
       });
     }
+  };
+
+  const openModal = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsModalOpen(true);
   };
 
   return (
@@ -87,9 +94,17 @@ const NavigationBar: React.FC = () => {
             </li>
           </ul>
 
-          <button className="navbar__cta">Book Free Marketing Audit</button>
+          <button className="navbar__cta" onClick={openModal}>
+            Book Free Marketing Audit
+          </button>
         </div>
       </div>
+      <ContactModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        title="Book a Free Marketing Audit now"
+        description="Fill out the form below and we'll get back to you within 24 hours."
+      />
     </nav>
   );
 };

@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/FinalConversionSection.css";
+import ContactModal from "./ContactModal";
 
 const FinalConversionSection: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsModalOpen(true);
+  };
+
   return (
     <section className="final-conversion-section">
       <div className="final-conversion-container">
@@ -24,10 +32,16 @@ const FinalConversionSection: React.FC = () => {
         </div>
 
         {/* CTA Button */}
-        <button className="final-conversion-cta">
+        <button className="final-conversion-cta" onClick={openModal}>
           Book Free Marketing Audit
         </button>
       </div>
+      <ContactModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        title="Book a Free Marketing Audit now"
+        description="Fill out the form below and we'll get back to you within 24 hours."
+      />
     </section>
   );
 };

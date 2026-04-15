@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/HeroSection.css";
 import jmaveLogo from "../assets/jmave_logo.png";
 import avarisLogo from "../assets/avaris_logo.png";
 import ihubLogo from "../assets/ihub_logo.png";
+import ContactModal from "./ContactModal";
 
 // Logo components - replace these with your actual logo imports
 const JMaveLogo: React.FC = () => (
@@ -32,12 +33,26 @@ const IhubLogo: React.FC = () => (
 );
 
 const HeroSection: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      const offset = 80; // Your header height
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
     }
   };
+
+  const openModal = (e: React.MouseEvent) => {
+      e.preventDefault();
+      setIsModalOpen(true);
+    };
 
   return (
     <section className="hero">
@@ -74,7 +89,7 @@ const HeroSection: React.FC = () => {
           <div className="hero__cta-group">
             <button
               className="hero__cta-primary"
-              onClick={() => scrollToSection("contact")}
+              onClick={openModal}
             >
               Book Your Free 1-Hour Marketing Audit
             </button>
@@ -216,6 +231,12 @@ const HeroSection: React.FC = () => {
           </div>
         </div>
       </div>
+      <ContactModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        title="Book your Free 1-Hour Marketing Audit now"
+        description="Fill out the form below and we'll get back to you within 24 hours."
+      />
     </section>
   );
 };

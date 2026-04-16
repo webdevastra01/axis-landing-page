@@ -3,6 +3,8 @@ import "../styles/HeroSection.css";
 import jmaveLogo from "../assets/jmave_logo.png";
 import avarisLogo from "../assets/avaris_logo.png";
 import ihubLogo from "../assets/ihub_logo.png";
+import axialLogo from "../assets/axial_logo.png";
+import astriaLogo from "../assets/astria_logo.png";
 import ContactModal from "./ContactModal";
 
 // Logo components - replace these with your actual logo imports
@@ -32,6 +34,26 @@ const IhubLogo: React.FC = () => (
   </a>
 );
 
+const AxialLogo: React.FC = () => (
+  <a href="https://facebook.com/axialmarketing" target="_blank">
+    <img
+      src={axialLogo}
+      alt="Axial Marketing"
+      className="hero__trust-logo-img"
+    />
+  </a>
+);
+
+const AstriaLogo: React.FC = () => (
+  <a href="https://facebook.com/astriasolutions" target="_blank">
+    <img
+      src={astriaLogo}
+      alt="Astria Solutions"
+      className="hero__trust-logo-img"
+    />
+  </a>
+);
+
 const HeroSection: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -50,9 +72,9 @@ const HeroSection: React.FC = () => {
   };
 
   const openModal = (e: React.MouseEvent) => {
-      e.preventDefault();
-      setIsModalOpen(true);
-    };
+    e.preventDefault();
+    setIsModalOpen(true);
+  };
 
   return (
     <section className="hero">
@@ -69,9 +91,8 @@ const HeroSection: React.FC = () => {
 
           {/* Headline */}
           <h1 className="hero__headline">
-            Turn Your Vision Into{" "}
-            <span className="hero__headline-accent">Visuals</span> That Grow
-            Your Business
+            Turning Your Vision Into{" "}
+            <span className="hero__headline-accent">Visuals</span>
           </h1>
 
           {/* Subheadline */}
@@ -87,10 +108,7 @@ const HeroSection: React.FC = () => {
 
           {/* CTA Buttons */}
           <div className="hero__cta-group">
-            <button
-              className="hero__cta-primary"
-              onClick={openModal}
-            >
+            <button className="hero__cta-primary" onClick={openModal}>
               Book Your Free 1-Hour Marketing Audit
             </button>
             <button
@@ -227,6 +245,24 @@ const HeroSection: React.FC = () => {
             <span className="hero__trust-name">I-Hub Davao</span>
             <span className="hero__trust-tagline">
               CoWorking Space and Bistro
+            </span>
+          </div>
+
+          <span className="hero__trust-divider" />
+
+          <div className="hero__trust-item">
+            <AxialLogo />
+            <span className="hero__trust-name">Axial</span>
+            <span className="hero__trust-tagline">Real Estate Services</span>
+          </div>
+
+          <span className="hero__trust-divider" />
+
+          <div className="hero__trust-item">
+            <AstriaLogo />
+            <span className="hero__trust-name">Astria Insurance Solutions</span>
+            <span className="hero__trust-tagline">
+              Life & Non-Life Insurance Services
             </span>
           </div>
         </div>

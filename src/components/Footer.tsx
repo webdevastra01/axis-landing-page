@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
           <div className="footer-brand">
             <h3 className="footer-brand-name">Axis Marketing Solutions</h3>
             <p className="footer-tagline">
-              Let’s turn your visions into visuals.
+              Let’s turn your vision into visuals.
             </p>
             <p className="footer-description">
               Helping brands stand out through strategic marketing, creative

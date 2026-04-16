@@ -30,7 +30,6 @@ const services: Service[] = [
       "Content calendar development and scheduling",
       "Community engagement and reputation management",
       "Analytics tracking and performance reporting",
-      "Influencer partnership coordination",
       "Paid social campaign management",
     ],
   },
@@ -58,9 +57,7 @@ const services: Service[] = [
     features: [
       "Google Ads and search campaign management",
       "Meta (Facebook/Instagram) advertising",
-      "LinkedIn B2B campaign strategies",
       "Retargeting and remarketing setups",
-      "A/B testing and conversion optimization",
     ],
   },
   {

@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/SalesCTA.css";
+import { SquareArrowOutUpRight } from "lucide-react";
 
 const SalesCTA: React.FC = () => {
   return (
@@ -20,7 +21,7 @@ const SalesCTA: React.FC = () => {
             rel="noopener noreferrer"
           >
             <span>Check out Avaris Sales Solutions</span>
-            <span className="sales-cta-arrow">👉</span>
+            <span className="sales-cta-arrow"><SquareArrowOutUpRight size={16} /></span>
           </a>
         </div>
       </div>

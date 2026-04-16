@@ -1,4 +1,3 @@
-/* Modal Overlay */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -160,6 +159,73 @@
   line-height: 1.6;
 }
 
+/* Checkbox Field */
+.modal__field--checkbox {
+  margin-top: var(--space-sm);
+}
+
+.modal__checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  cursor: pointer;
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  transition: background var(--transition-fast);
+}
+
+.modal__checkbox-label:hover {
+  background: var(--axis-gray-50);
+}
+
+.modal__checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.modal__checkbox-custom {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  border: 2px solid var(--axis-gray-300);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+  margin-top: 2px;
+}
+
+.modal__checkbox-custom svg {
+  color: var(--axis-white);
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all var(--transition-fast);
+}
+
+.modal__checkbox:checked + .modal__checkbox-custom {
+  background: var(--axis-primary);
+  border-color: var(--axis-primary);
+}
+
+.modal__checkbox:checked + .modal__checkbox-custom svg {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.modal__checkbox:focus + .modal__checkbox-custom {
+  box-shadow: 0 0 0 3px rgba(75, 0, 110, 0.2);
+}
+
+.modal__checkbox-text {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  line-height: 1.5;
+  user-select: none;
+}
+
 /* Submit Button */
 .modal__submit {
   display: flex;
@@ -314,5 +380,13 @@
   .modal__status {
     margin-left: var(--space-lg);
     margin-right: var(--space-lg);
+  }
+
+  .modal__checkbox-label {
+    padding: var(--space-sm);
+  }
+
+  .modal__checkbox-text {
+    font-size: 0.85rem;
   }
 }

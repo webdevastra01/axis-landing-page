@@ -13,10 +13,6 @@ const FinalConversionSection: React.FC = () => {
   return (
     <section className="final-conversion-section">
       <div className="final-conversion-container">
-        {/* Tagline */}
-        <span className="final-conversion-tagline">
-          Strong emotional close.
-        </span>
 
         {/* Headline */}
         <h2 className="final-conversion-headline">

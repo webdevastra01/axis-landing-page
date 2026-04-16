@@ -16,7 +16,7 @@
   right: -100px;
   width: 500px;
   height: 500px;
-  background-image: url('/src/assets/axis_logo_bg.png'); 
+  background-image: url("/src/assets/axis_logo_bg.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -519,10 +519,6 @@
 
   .hero__value-points {
     text-align: left;
-  }
-
-  .hero__visual {
-    order: -1;
   }
 
   .hero__dashboard {

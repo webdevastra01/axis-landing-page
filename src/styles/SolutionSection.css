@@ -225,7 +225,7 @@
   }
 
   .solution-list {
-    align-items: center;
+    align-items: start;
   }
 
   .solution-item {

@@ -19,15 +19,16 @@ const ContactSection: React.FC = () => {
     {
       icon: MapPin,
       label: "Office Address",
-      value: "Pines Place, Pioneer Drive",
-      subValue: "Bajada, Davao City",
+      value: "iHub at Pines Place, Pioneer Drive",
+      subValue: "Brgy. Wilfredo Aquino, Bajada, Davao City, Philippines, 8000",
       note: "Near Bluepost Boiling Crabs & Shrimps",
       href: "https://maps.app.goo.gl/5MbCRRe86jG3j6A29",
     },
     {
       icon: Clock,
       label: "Business Hours",
-      value: "24/7 Marketing Support",
+      value: "8am - 7pm Marketing Support",
+      subValue: "Chat support (Meta 24/7)",
       isHighlight: true,
     },
   ];

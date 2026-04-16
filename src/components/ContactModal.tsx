@@ -1,5 +1,15 @@
 import React, { useState } from "react";
-import { X, Mail, User, MessageSquare, Tag } from "lucide-react";
+import {
+  X,
+  Mail,
+  User,
+  MessageSquare,
+  Tag,
+  Building2,
+  Briefcase,
+  Phone,
+  Check,
+} from "lucide-react";
 import "../styles/ContactModal.css";
 
 interface ContactModalProps {
@@ -20,6 +30,11 @@ const ContactModal: React.FC<ContactModalProps> = ({
     email: "",
     subject: "",
     message: "",
+    businessName: "",
+    position: "",
+    contactNumber: "",
+    preferredContact: "email",
+    consent: false,
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -32,8 +47,17 @@ const ContactModal: React.FC<ContactModalProps> = ({
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >,
   ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    const { name, value, type } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]:
+        type === "checkbox" ? (e.target as HTMLInputElement).checked : value,
+    }));
+  };
+
+  const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, checked } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: checked }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -57,6 +81,11 @@ const ContactModal: React.FC<ContactModalProps> = ({
         email: "",
         subject: "",
         message: "",
+        businessName: "",
+        position: "",
+        contactNumber: "",
+        preferredContact: "email",
+        consent: false,
       });
     } catch (error) {
       setSubmitStatus("error");
@@ -111,7 +140,7 @@ const ContactModal: React.FC<ContactModalProps> = ({
           <div className="modal__field">
             <label htmlFor="name" className="modal__label">
               <User size={18} />
-              Full Name
+              Full Name *
             </label>
             <input
               type="text"
@@ -129,7 +158,7 @@ const ContactModal: React.FC<ContactModalProps> = ({
           <div className="modal__field">
             <label htmlFor="email" className="modal__label">
               <Mail size={18} />
-              Email Address
+              Email Address *
             </label>
             <input
               type="email"
@@ -143,11 +172,83 @@ const ContactModal: React.FC<ContactModalProps> = ({
             />
           </div>
 
+          {/* Business Name Field */}
+          <div className="modal__field">
+            <label htmlFor="businessName" className="modal__label">
+              <Building2 size={18} />
+              Business Name
+            </label>
+            <input
+              type="text"
+              id="businessName"
+              name="businessName"
+              value={formData.businessName}
+              onChange={handleChange}
+              placeholder="Your Company Inc."
+              className="modal__input"
+            />
+          </div>
+
+          {/* Position/Role Field */}
+          <div className="modal__field">
+            <label htmlFor="position" className="modal__label">
+              <Briefcase size={18} />
+              Position / Role
+            </label>
+            <input
+              type="text"
+              id="position"
+              name="position"
+              value={formData.position}
+              onChange={handleChange}
+              placeholder="Marketing Manager"
+              className="modal__input"
+            />
+          </div>
+
+          {/* Contact Number Field */}
+          <div className="modal__field">
+            <label htmlFor="contactNumber" className="modal__label">
+              <Phone size={18} />
+              Contact Number
+            </label>
+            <input
+              type="tel"
+              id="contactNumber"
+              name="contactNumber"
+              value={formData.contactNumber}
+              onChange={handleChange}
+              placeholder="+1 (555) 123-4567"
+              className="modal__input"
+            />
+          </div>
+
+          {/* Preferred Contact Method Field */}
+          <div className="modal__field">
+            <label htmlFor="preferredContact" className="modal__label">
+              <MessageSquare size={18} />
+              Preferred Contact Method *
+            </label>
+            <select
+              id="preferredContact"
+              name="preferredContact"
+              value={formData.preferredContact}
+              onChange={handleChange}
+              required
+              className="modal__input modal__select"
+            >
+              <option value="email">Email</option>
+              <option value="phone">Phone Call</option>
+              <option value="sms">SMS/Text</option>
+              <option value="whatsapp">WhatsApp</option>
+            </select>
+          </div>
+
           {/* Subject Field */}
           <div className="modal__field">
             <label htmlFor="subject" className="modal__label">
               <Tag size={18} />
-              Service Interest
+              Service Interest *
             </label>
             <select
               id="subject"
@@ -174,7 +275,7 @@ const ContactModal: React.FC<ContactModalProps> = ({
           <div className="modal__field">
             <label htmlFor="message" className="modal__label">
               <MessageSquare size={18} />
-              Message
+              Message *
             </label>
             <textarea
               id="message"
@@ -186,6 +287,27 @@ const ContactModal: React.FC<ContactModalProps> = ({
               rows={4}
               className="modal__input modal__textarea"
             />
+          </div>
+
+          {/* Consent Checkbox */}
+          <div className="modal__field modal__field--checkbox">
+            <label className="modal__checkbox-label">
+              <input
+                type="checkbox"
+                name="consent"
+                checked={formData.consent}
+                onChange={handleCheckboxChange}
+                required
+                className="modal__checkbox"
+              />
+              <span className="modal__checkbox-custom">
+                <Check size={14} />
+              </span>
+              <span className="modal__checkbox-text">
+                I agree to be contacted by Axis Marketing Solutions for this
+                promo and future updates. *
+              </span>
+            </label>
           </div>
 
           {/* Submit Button */}

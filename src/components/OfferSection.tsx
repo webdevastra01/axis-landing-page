@@ -6,7 +6,6 @@ const offerBenefits = [
   "Brand audit",
   "Content strategy review",
   "Growth opportunities",
-  "Competitor analysis",
 ];
 
 const OfferSection: React.FC = () => {

@@ -18,9 +18,10 @@
   right: -200px;
   width: 600px;
   height: 600px;
-  border: 60px solid var(--axis-primary, #4b006e);
-  border-radius: 50%;
-  opacity: 0.08;
+  background-image: url('/src/assets/axis_logo_bg.png'); 
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   pointer-events: none;
 }
 

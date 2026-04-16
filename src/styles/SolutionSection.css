@@ -200,14 +200,15 @@
 
 .solution-accent-circle {
   position: absolute;
-  width: 200px;
-  height: 200px;
-  border: 30px solid var(--axis-primary);
-  border-radius: 50%;
-  opacity: 0.1;
-  bottom: -50px;
-  right: -50px;
-  z-index: 0;
+  top: 100px;
+  right: -200px;
+  width: 500px;
+  height: 500px;;
+  background-image: url('/src/assets/axis_logo_bg.png'); 
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.2; /* Adjust as needed */
   pointer-events: none;
 }
 

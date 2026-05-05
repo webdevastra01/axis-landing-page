@@ -43,7 +43,7 @@ export default function App() {
 
         <meta property="og:type" content="website" />
 
-        {/* <meta property="og:url" content="https://your-axis-domain.com" /> */}
+        <meta property="og:url" content="https://axis.astragroupph.com/" />
       </Helmet>
 
       <NavigationBar />

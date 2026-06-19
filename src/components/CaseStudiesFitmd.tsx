@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
 import {
-  ArrowLeft,
   Users,
   Target,
   TrendingUp,
   ArrowRight,
   Stethoscope,
 } from "lucide-react";
-import { useNavigate } from "react-router-dom";
 
 // Placeholder imports - replace with actual assets
 import fitmdLogo from "../assets/fitmd_logo.jpg";
@@ -196,7 +194,6 @@ This pre-launch preparation ensures FitMD enters the market with professional cl
 /* ─── COMPONENT ────────────────────────────────────────── */
 
 const CaseStudyPageFitmd: React.FC = () => {
-  const navigate = useNavigate();
   const [activeStep, setActiveStep] = useState<number | null>(null);
 
   const study = caseStudies["fitmd"];

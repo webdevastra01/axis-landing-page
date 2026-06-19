@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import {
-  ArrowLeft,
   Users,
   Eye,
   MousePointer,
@@ -8,7 +7,6 @@ import {
   TrendingUp,
   ArrowRight,
 } from "lucide-react";
-import { useNavigate, useParams } from "react-router-dom";
 import ihubLogo from "../assets/ihub_logo.png";
 import ihubHero from "../assets/ihub-hero.jpg";
 import "../styles/CaseStudyPage.css";

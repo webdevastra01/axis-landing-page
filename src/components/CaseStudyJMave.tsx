@@ -1,13 +1,11 @@
 import React, { useEffect, useState, type JSX } from "react";
 import {
-  ArrowLeft,
   Users,
   Eye,
   Target,
   TrendingUp,
   ArrowRight,
 } from "lucide-react";
-import { useNavigate } from "react-router-dom";
 
 // Placeholder imports - replace with actual assets when available
 import jmaveLogo from "../assets/jmave_logo.png";

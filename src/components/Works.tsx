@@ -155,7 +155,7 @@ function Works() {
     <div className="flexbox" style={{ marginTop: "80px" }}>
       {items.map((item, index) => (
         <div className="item" key={index}>
-          <img src={item.src} alt={item.title} />
+          <img src={decodeURIComponent(item.src)} alt={item.title} />
           {/* <p className="title">{item.title}</p> */}
         </div>
       ))}

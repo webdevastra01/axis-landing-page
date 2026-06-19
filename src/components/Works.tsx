@@ -5,27 +5,27 @@ const items = [
     title: "Bangsilog",
   },
   {
-    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/yty.jpg",
+    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Caesar.jpg",
     title: "8th item",
   },
   {
-    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Caesar.jpg",
+    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Chill_Nights.jpg",
     title: "Caesar Salad",
   },
   {
-    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Chopsuey%20(1).jpg",
+    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Chopsuey.jpg",
     title: "Chopsuey Rice Bowl",
   },
   {
-    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Chopsuey.jpg",
+    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Chopsuey_1.jpg",
     title: "Chopsuey",
   },
   {
-    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Coffee%20&%20Muffin.jpg",
+    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Coffee_&_Muffin.jpg",
     title: "Coffee and Muffin",
   },
   {
-    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Coffee%20Break.jpg",
+    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Coffee_Break.jpg",
     title: "CoffeeBreak",
   },
   {
@@ -33,119 +33,119 @@ const items = [
     title: "Curry",
   },
   {
-    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Matchaaa.jpg",
+    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Curry.jpg",
     title: "10th item",
-  },
-  {
-    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Pasta%201.jpg",
-    title: "8th item",
-  },
-  {
-    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Pasta%202.jpg",
-    title: "9th item",
-  },
-  {
-    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Pasta%203.jpg",
-    title: "10th item",
-  },
-  {
-    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Pasta%204.jpg",
-    title: "1st item",
   },
   {
     src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/drink.jpg",
-    title: "9th item",
-  },
-  {
-    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Pork%20Adobo.jpg",
-    title: "2nd item",
-  },
-  {
-    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Pork%20Tonkatsu.jpg",
-    title: "3rd item",
-  },
-  {
-    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Salad%2010.png",
-    title: "4th item",
-  },
-  {
-    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Teriyaki.jpg",
-    title: "5th item",
-  },
-  {
-    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Tonkatsu.jpg",
-    title: "6th item",
-  },
-  {
-    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Veggie%20Bowl.jpg",
-    title: "7th item",
-  },
-  {
-    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Whisky.jpg",
     title: "8th item",
   },
   {
-    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/iWork.jpg",
+    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Game_Night.jpg",
     title: "9th item",
   },
   {
-    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/July%20first.jpg",
+    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Great_Nights.jpg",
     title: "10th item",
   },
   {
-    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Productivity%20hub.jpg",
-    title: "8th item",
-  },
-  {
-    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Remote%20work.jpg",
-    title: "9th item",
+    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/iPlay_15.jpg",
+    title: "1st item",
   },
   {
     src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/iStudy.jpg",
-    title: "10th item",
-  },
-  {
-    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/iStudy%20Goals.jpg",
     title: "9th item",
   },
   {
-    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/iStudy%20Pass.jpg",
-    title: "10th item",
+    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/iStudy_Goals.jpg",
+    title: "2nd item",
   },
   {
-    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/June%20iStudy.jpg",
+    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/iStudy_Pass.jpg",
+    title: "3rd item",
+  },
+  {
+    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/iWork.jpg",
+    title: "4th item",
+  },
+  {
+    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/July_first.jpg",
+    title: "5th item",
+  },
+  {
+    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/June_iStudy.jpg",
+    title: "6th item",
+  },
+  {
+    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Matchaaa.jpg",
+    title: "7th item",
+  },
+  {
+    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Pasta_1.jpg",
     title: "8th item",
   },
   {
-    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Study%20Buddy%20(May%2011).jpg",
+    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Pasta_2.jpg",
     title: "9th item",
   },
   {
-    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Study%20Session.jpg",
+    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Pasta_3.jpg",
     title: "10th item",
   },
   {
-    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Study%20Smarter.jpg",
-    title: "9th item",
-  },
-  {
-    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Chill%20Nights.jpg",
-    title: "10th item",
-  },
-  {
-    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Focus.jpg",
+    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Pasta_4.jpg",
     title: "8th item",
   },
   {
-    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Game%20Night.jpg",
+    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Pork_Adobo.jpg",
     title: "9th item",
   },
   {
-    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Great%20Nights.jpg",
+    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Pork_Tonkatsu.jpg",
     title: "10th item",
   },
   {
-    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/iPlay%2015.jpg",
+    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Productivity_hub.jpg",
+    title: "9th item",
+  },
+  {
+    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Remote_work.jpg",
+    title: "10th item",
+  },
+  {
+    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Salad_10.png",
+    title: "8th item",
+  },
+  {
+    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Study_Buddy_(May11).jpg",
+    title: "9th item",
+  },
+  {
+    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Study_Session.jpg",
+    title: "10th item",
+  },
+  {
+    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Study_Smarter.jpg",
+    title: "9th item",
+  },
+  {
+    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Teriyaki.jpg",
+    title: "10th item",
+  },
+  {
+    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Tonkatsu.jpg",
+    title: "8th item",
+  },
+  {
+    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Veggie_Bowl.jpg",
+    title: "9th item",
+  },
+  {
+    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/Whisky.jpg",
+    title: "10th item",
+  },
+  {
+    src: "https://gasrncdfxphcxiwjevzl.supabase.co/storage/v1/object/public/works/yty.jpg",
     title: "10th item",
   },
 ];

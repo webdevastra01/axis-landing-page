@@ -12,8 +12,32 @@ import ProcessSection from "./components/ProcessSection";
 import SalesCTA from "./components/SalesCTA";
 import ServicesSection from "./components/ServicesSection";
 import SolutionSection from "./components/SolutionSection";
+import { Route, Routes } from "react-router-dom";
+import Works from "./components/Works";
+import CaseStudyPageIhub from "./components/CaseStudiesIhub";
+import CaseStudyPageJmave from "./components/CaseStudyJMave";
+import CaseStudiesHub from "./components/CaseStudies";
+import CaseStudyPageFitmd from "./components/CaseStudiesFitmd";
+import { useEffect } from "react";
 
 export default function App() {
+  useEffect(() => {
+    if (window.location.hash) {
+      const sectionId = window.location.hash.replace("#", "");
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const offset = 80;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
+    }
+  }, []);
+
   return (
     <>
       <Helmet>
@@ -46,20 +70,80 @@ export default function App() {
         <meta property="og:url" content="https://axis.astragroupph.com/" />
       </Helmet>
 
-      <NavigationBar />
-      <div style={{ height: "80px" }} />
-      <HeroSection />
-      <ProblemSection />
-      <SolutionSection />
-      <SalesCTA />
-      <ServicesSection />
-      <OfferSection />
-      <ProcessSection />
-      <AboutSection />
-      <DifferentiationSection />
-      <FinalConversionSection />
-      <ContactSection />
-      <Footer />
+      <Routes>
+        {/* Home / Landing Page */}
+        <Route
+          path="/"
+          element={
+            <>
+              <NavigationBar />
+              <div style={{ height: "80px" }} />
+              <HeroSection />
+              <ProblemSection />
+              <SolutionSection />
+              <SalesCTA />
+              <ServicesSection />
+              <OfferSection />
+              <ProcessSection />
+              <AboutSection />
+              <DifferentiationSection />
+              <FinalConversionSection />
+              <ContactSection />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/works"
+          element={
+            <>
+              <NavigationBar />
+              <Works />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/case-studies"
+          element={
+            <>
+              <NavigationBar />
+              <CaseStudiesHub />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/case-studies/ihub-davao"
+          element={
+            <>
+              <NavigationBar />
+              <CaseStudyPageIhub />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/case-studies/j-mave"
+          element={
+            <>
+              <NavigationBar />
+              <CaseStudyPageJmave />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/case-studies/fitmd"
+          element={
+            <>
+              <NavigationBar />
+              <CaseStudyPageFitmd />
+              <Footer />
+            </>
+          }
+        />
+      </Routes>
     </>
   );
 }

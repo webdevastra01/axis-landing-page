@@ -19,6 +19,14 @@ const NavigationBar: React.FC = () => {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
+    // Check if we are on the index page
+    if (window.location.pathname !== "/") {
+      // Redirect to index and include the sectionId in the URL
+      window.location.href = `/#${sectionId}`;
+      return;
+    }
+
+    // If already on index, just scroll
     const element = document.getElementById(sectionId);
     if (element) {
       const offset = 80;
@@ -30,6 +38,7 @@ const NavigationBar: React.FC = () => {
         behavior: "smooth",
       });
     }
+
     setIsMobileMenuOpen(false);
   };
 
@@ -75,6 +84,21 @@ const NavigationBar: React.FC = () => {
                   onClick={() => scrollToSection("process")}
                 >
                   Process
+                </button>
+              </li><li className="navbar__item">
+                <button
+                  className="navbar__link"
+                  onClick={() => (window.location.href = "/works")}
+                >
+                  Works
+                </button>
+              </li>
+              <li className="navbar__item">
+                <button
+                  className="navbar__link"
+                  onClick={() => (window.location.href = "/case-studies")}
+                >
+                  Case Studies
                 </button>
               </li>
               <li className="navbar__item">

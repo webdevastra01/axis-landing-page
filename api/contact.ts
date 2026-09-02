@@ -20,7 +20,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     // 1️⃣ Email to company
     await transporter.sendMail({
       from: `"Website Contact" <${process.env.EMAIL_USER}>`,
-      to: "youraxisms@gmail.com",
+      to: "axismarketing@astragroupph.com",
       subject: `New Contact Form: ${subject}`,
       replyTo: email,
       html: `
@@ -105,7 +105,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         © ${new Date().getFullYear()} Axis Marketing Solutions. All rights reserved.
       </p>
       <p style="margin: 8px 0 0; font-size: 12px; color: #6b7280;">
-        youraxisms@gmail.com
+        axismarketing@astragroupph.com
       </p>
     </div>
 

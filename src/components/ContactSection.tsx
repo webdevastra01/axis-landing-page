@@ -7,8 +7,8 @@ const ContactSection: React.FC = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "youraxisms@gmail.com",
-      href: "mailto:youraxisms@gmail.com",
+      value: "axismarketing@astragroupph.com",
+      href: "mailto:axismarketing@astragroupph.com",
     },
     {
       icon: Phone,

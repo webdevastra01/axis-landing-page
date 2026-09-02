@@ -46,11 +46,11 @@ const Footer: React.FC = () => {
             <h4 className="footer-contact-title">Get in Touch</h4>
 
             <a
-              href="mailto:youraxisms@gmail.com"
+              href="mailto:axismarketing@astragroupph.com"
               className="footer-contact-item"
             >
               <Mail size={18} strokeWidth={2} />
-              <span>youraxisms@gmail.com</span>
+              <span>axismarketing@astragroupph.com</span>
             </a>
 
             <a href="tel:+639309320571" className="footer-contact-item">

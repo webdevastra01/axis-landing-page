@@ -362,7 +362,9 @@ const ContactModal: React.FC<ContactModalProps> = ({
         {/* Footer Note */}
         <p className="modal__footer">
           Prefer email? Reach us directly at{" "}
-          <a href="mailto:contact@youraxisms@gmail.com">youraxisms@gmail.com</a>
+          <a href="mailto:axismarketing@astragroupph.com">
+            axismarketing@astragroupph.com
+          </a>
         </p>
       </div>
     </div>
